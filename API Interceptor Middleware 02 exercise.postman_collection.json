@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "9eeead08-e88c-45d8-9754-2030c65bc248",
+		"name": "API Interceptor Middleware 02 exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21617836"
+	},
+	"item": [
+		{
+			"name": "Welcome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Absent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/months",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Empty",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/months",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Is in the list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/months",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Is not in the list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "monthNumber",
+						"value": "7",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/months",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"months"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "localhost:8080"
+		}
+	]
+}
